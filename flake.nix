@@ -3,7 +3,13 @@
 
   outputs = { ... }:
     let
-      targets = [ "arm-linux-gnueabihf" ];
+      targets = [
+        "aarch64-elf"
+        "arm-linux-gnueabihf"
+        "i686-elf"
+        "x86_64-elf"
+        "x86_64-linux-gnu"
+      ];
     in
       {
         overlay = (_: super: 
